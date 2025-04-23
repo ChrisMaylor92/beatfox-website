@@ -1,0 +1,522 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*Resets*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: black;
+    font-size: 14px;
+    
+}
+
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.audiowide-regular {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Navbar */
+#navbar-container{
+    /* background-image: url("../assets/nav-bg.jpg");
+    background-size: cover;
+    box-shadow: inset 0px -50px 50px  #000; */
+    position: fixed;
+    top:0;
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    display:flex;
+    z-index: 10;
+}
+#navbar-container h1{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-family:"Audiowide", serif;
+    color: white;
+    font-size:2rem;
+    opacity:0.8;
+}
+#navbar-container a{
+    text-decoration: none;
+    
+    color: white;
+}
+
+#nav-logo{
+    height:75%;
+    display:block;
+    margin: auto 0;
+    margin-left: 10px;
+}
+#home{
+  width:100%;
+  height:200vh;
+}
+#panel-group{
+  position:fixed;
+}
+
+.panel{
+
+  position:relative;
+}
+#home-music-container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#home-music-title{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  margin:auto;
+  z-index:2;
+  font-family:"Audiowide", serif;
+  color: white;
+  font-size:2rem;
+  opacity:0.8;
+}
+#home-music-video{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  height:100vh;
+  margin:auto;
+  z-index:2;
+}
+
+
+
+#home-art-container{
+ 
+  height:100vh;
+}
+#home-art-title{
+ 
+  position: absolute;
+  bottom:48vh;
+  left: 0;
+  right:0;
+  width: fit-content;
+  margin-inline: auto;
+  font-family:"Audiowide", serif;
+  color: white;
+  font-size:2rem;
+  opacity:0.8;
+}
+
+#home-art-video{
+  position:absolute;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  height:100vh;
+  margin:auto;
+  bottom: 0;
+}
+
+
+#test{
+  z-index:4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; 
+  height: 300px;
+  background-color: white;
+}
+
+#handle{
+  
+  height:15px;
+  z-index:2;
+}
+/* header */
+
+#header{
+  
+    width:100%;
+    height:50vh;
+    background-color: white;
+}
+
+.music-img{
+  width: 100%;
+}
+#music-title{
+  font-family: "Audiowide", serif;
+  text-align: center;
+  line-height: 2rem;
+  margin: auto;
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  padding-top: 250px;
+  padding-bottom:20px;
+}
+
+
+
+
+
+#header-video{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+    /* opacity:0.7; */
+}
+
+ /* Bio  */
+
+#bio-container{
+    background-color: black;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.bio-img{
+  width:100%;
+  height:auto;
+}
+
+#bio-title{
+    font-family: "Audiowide", serif;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 20px;
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    padding-bottom: 20px;
+}
+
+#bio-container p{
+    font-family: "Audiowide", serif;
+    text-align: center;
+    line-height: 1.4rem;
+    margin: 0 15px;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.9;
+    padding-bottom:20px;
+}
+
+
+
+
+#bio-button{
+    background-color: white;
+    opacity: 0.8;
+    height:25px;
+    width:25px;
+    margin: 0 auto;
+    border-radius:25px;
+    margin-bottom: 20px;
+}
+#bio-arrow{
+  padding-left: 5px;
+  padding-top: 5px;
+  color:black;
+}
+
+
+/* portfolio */
+
+#portfolio{
+  width: 100%;
+  background-color: black;
+}
+
+
+#portfolio-title{
+  font-family: "Audiowide", serif;
+  text-align: center;
+  line-height: 2rem;
+  margin: 0 20px;
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.portfolio-card{
+  height: 95vh;
+  width: 100%;
+  overflow:hidden;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+}
+.portfolio-card h1{
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    font-family: "Audiowide", serif;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    text-shadow: 
+    0 0 30px black,
+    0 0 30px black,
+    0 0 30px black,
+    0 0 30px black;
+}
+.portfolio-overlay{
+  position: absolute;
+  opacity: 0.6;
+  box-shadow: 
+  inset 0px -100px 100px black,
+  inset 0px -100px 100px black,
+  inset 0px -100px 100px black,
+  inset 0px -100px 100px black,
+  inset 0px -100px 100px black;
+  width:100%;
+  height: 100%;
+}
+
+#solo-card{
+  background-image: url("./assets/media/solo-ceiling.png");
+  background-position: center top;
+}
+#collab-card{
+  background-image: url("./assets/media/collab-japanese.png");
+  background-position: right top;
+}
+#brand-card{
+  background-image: url("./assets/media/brand-pumpkin.jpg");
+  background-position: right top;
+}
+
+
+/* Gallery */
+#gallery{
+  width: 100%;
+  /* height: 100vh; */
+  background-color: black;
+}
+#gallery-title{
+  font-family: "Audiowide", serif;
+  text-align: center;
+  line-height: 2rem;
+  margin: 0 20px;
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+#gallery-container{
+  margin: 10px;
+  height: 75vh;
+  display: grid;
+  gap:10px;
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr ;
+}
+
+.gallery-img-1{
+  background-image: url("./assets/media/gallery-green-blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 1 / 5;
+  grid-column: 1 / 4;
+}
+.gallery-img-2{
+  background-image: url("./assets/media/gallery-vertical.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  grid-row: 1 / 5;
+  grid-column: 3 / 4;
+  
+}
+.gallery-img-3{
+  background-image: url("./assets/media/gallery-roller.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  grid-row: 5/7;
+  grid-column: 1 / 4;
+}
+/* .gallery-img-4{
+  background-image: url("./assets/media/collab-santa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+
+  grid-row: 6 / 9;
+  grid-column: 1 / 4;
+} */
+/* .gallery-img-5{
+  background-image: url("./assets/media/gallery-purple.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+} */
+/* .gallery-img-6{
+  background-image: url("./assets/media/gallery-ladder.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  grid-row: 1 / 4;
+  grid-column: 4 / 6;
+} */
+
+#canvas-carousel-container{
+    width: 95%;
+    background-color: black;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+#home-test{
+  width: 100%;
+  height: 200vh;
+ 
+}
+
+
+
+#para-vid-1{
+  width: 100%;
+  height: 100vh;
+  
+  /* background-attachment: fixed; */
+  position: sticky;
+  top:0 ;
+  z-index: 0;
+}
+#para-vid-1 video{
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+
+#page-2-img{
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+
+
+
+
+
+#para-vid-2{
+  width: 100%;
+  height: 100vh;
+  
+}
+#para-vid-2 video{
+  /* position: fixed; */
+  top: 0;
+  z-index: -999;
+}
+
+
+
+
+
+
+
+
+#home-music-video-test{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
+}
+#block{
+  margin-top: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+
+  position: absolute;
+  /* z-index: 0; */
+
+}
+
+#home-art-video-test{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* z-index:-1; */
+}
