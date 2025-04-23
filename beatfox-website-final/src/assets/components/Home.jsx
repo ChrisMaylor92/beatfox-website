@@ -3,19 +3,14 @@ import homeVideoMusic from "../media/home-music.mp4"
 import beatfoxRows from "../media/beatfox-rows.jpg"
 import { Link } from 'react-router-dom';
 import {
-    ImperativePanelHandle,
     Panel,
     PanelGroup,
     PanelResizeHandle,
   } from "react-resizable-panels";
+  import { useState, useEffect, useRef } from "react";
 
 export const Home = () => {
-    const ref = useRef<ImperativePanelHandle>(null);
-    const runTest = () => {
-        const panel = ref.current;
-        console.log(panel.getSize());
-      };
-
+    const panelRef = useRef(null);
 
     function getScrollPercent() {
         var h = document.documentElement, 
@@ -24,56 +19,28 @@ export const Home = () => {
             sh = 'scrollHeight';
         return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
     }
-    document.getElementById("music-panel")
-
-    function logResize(event) {
-        console.log(Panel.getSize())
-    }
-    // function runTest() {
-    //     console.log(Panel.getSize())
-    // }
+    
     window.onscroll = () => {
+        const panel = panelRef.current;
+        if (panel) {
+            panel.resize(getScrollPercent());
+        }
         console.log(getScrollPercent())
     }
     
-    
     return (
         <div id="home">
-            {/* <div id="home-test">
-                <div id="text">
-                    <h1></h1>
-                </div>
-                <div id="para-vid-1">
-                    <video  autoPlay loop muted src={homeVideoMusic}></video>
-                </div>
-                
-                
-                <video id="page-2-img" autoPlay loop muted src={homeVideoArt}></video> 
-                
-            </div> */}
-            
-            {/* <div id="para-vid-2">
-                <video  autoPlay loop muted src={homeVideoArt}></video> 
-            </div> */}
-            {/* <div id="music-page">
-                <video id="home-music-video-test" autoPlay loop muted src={homeVideoMusic}></video>
-                <div id="block">
-                    <video id="home-art-video-test" autoPlay loop muted src={homeVideoArt}></video>  
-
-                </div>
-            </div> */}
-
+        
             <PanelGroup direction="vertical" id="panel-group"> 
-                <Panel ref={ref} minSize={7} order={1} className="panel" onResize={logResize} onClick={runTest} id="music-panel">
+                <Panel  ref={panelRef} minSize={7} order={1}  className="panel" id="music-panel">
                     <div id="home-music-container">
                         <video id="home-music-video" autoPlay loop muted src={homeVideoMusic}></video>
                         <Link to="/music" id="home-music-title">
                             <h1 >Music</h1>
                         </Link>
                     </div>
-
                 </Panel>
-                <PanelResizeHandle id="handle"/>
+                <PanelResizeHandle/>
                 <Panel minSize={0} order={1} className="panel">
                     <div id="home-art-container">
                         <video id="home-art-video" autoPlay loop muted src={homeVideoArt}></video>  
@@ -83,8 +50,7 @@ export const Home = () => {
                     </div>
                 </Panel>
             </PanelGroup>
-            
-            
+
         </div>
     )
 }
