@@ -65,7 +65,7 @@ export const HomeTwo = () => {
             
                     
         <img id="test-img-1" src={beatfoxRows}/>
-        <img id="test-img-2" src={beatfoxRows}/>
+        {/* <img id="test-img-2" src={beatfoxRows}/> */}
         </div>
         
     </div>
