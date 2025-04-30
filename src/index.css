@@ -130,7 +130,7 @@ body{
 
 #test-img{
   width: 100%;
-  height: 100svh;
+  height: 99svh;
   overflow:hidden;
   object-fit: cover;
 }
