@@ -70,9 +70,10 @@ export const Home = () => {
     window.onscroll = () => {
         const panel = panelRef.current;
         const scrollPercent = getScrollPercent()
+        const oppositePercent = 100 - scrollPercent
         
         if (panel) {
-            panel.resize(scrollPercent);
+            panel.resize(oppositePercent);
         }
         
     }
