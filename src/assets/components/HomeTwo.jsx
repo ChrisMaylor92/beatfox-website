@@ -4,6 +4,14 @@ import homeVideoMusic from "../media/home-music.mp4"
 import japan from "../media/collab-japanese.png"
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from "react";
+import {
+    Panel,
+    PanelGroup,
+    PanelResizeHandle,
+  } from "react-resizable-panels";
+
+
+
 export const HomeTwo = () => {
 
 
@@ -30,22 +38,34 @@ export const HomeTwo = () => {
 
     return (
     <div id="home-two">
+        <PanelGroup direction="vertical" id="panel-group"> 
+                <Panel  defaultSize={50} minSize={7} order={1}  className="panel" >
+                    <div id="homeTwo-music-container">
+                        <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>     
+                        <Link to="/music" id="homeTwo-music-title" >
+                            <h1 >Music</h1>
+                        </Link>
+                    </div>
+                </Panel>
+                <PanelResizeHandle id="homeTwo-pandle"/>
+                <Panel minSize={0} order={1} className="panel" >
+                    <div id="homeTwo-art-container">
+                        <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
+                        <Link to="/art" id="homeTwo-art-title">
+                            <h1>Art</h1>
+                        </Link>
+                    </div>
+                </Panel>
+            </PanelGroup>
         <div id="scroll-container">
 
-
             
-            <div id="homeTwo-music-container">
-                <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>
-                <Link to="/music" id="homeTwo-music-title" >
-                    <h1 >Music</h1>
-                </Link>
-            </div>
-            <div id="homeTwo-art-container">
-                <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
-                <Link to="/art" >
-                    <h1 id="homeTwo-art-title">Art</h1>
-                </Link>
-            </div>   
+
+
+            <div id="scroll-spacing"></div>
+                    
+        <img id="test-img-1" src={beatfoxRows}/>
+        <img id="test-img-2" src={beatfoxRows}/>
         </div>
         
     </div>
