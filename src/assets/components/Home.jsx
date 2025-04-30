@@ -54,7 +54,7 @@ export const Home = () => {
             console.log(scrollDiv.current.scrollTop, "<<<")
             console.log(scrollDiv.current.scrollHeight, ">>>");
           }
-        scrollAnimOne()
+        // scrollAnimOne()
         
     }, [])
 
@@ -73,7 +73,7 @@ export const Home = () => {
         const oppositePercent = 100 - scrollPercent
         
         if (panel) {
-            panel.resize(oppositePercent);
+            panel.resize(scrollPercent);
         }
         
     }
