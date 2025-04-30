@@ -187,7 +187,7 @@ body{
 #home-music-video{
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100svh;
+  height:100lvh;
   margin:auto;
   z-index:2;
 }
@@ -235,7 +235,7 @@ body{
   position:absolute;
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100svh;
+  height:100lvh;
   margin:auto;
   bottom: 0;
 }
