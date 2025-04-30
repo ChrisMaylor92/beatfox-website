@@ -182,10 +182,12 @@ body{
     transform: translateX(0px) 
   }
 }
+
+/* CHANGES */
 #home-music-video{
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100vh;
+  height:100svh;
   margin:auto;
   z-index:2;
 }
@@ -228,11 +230,12 @@ body{
     transform: translateX(500px) 
   }
 }
+/* CHANGES */
 #home-art-video{
   position:absolute;
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100vh;
+  height:100svh;
   margin:auto;
   bottom: 0;
 }
