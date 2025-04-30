@@ -62,7 +62,7 @@ export const HomeTwo = () => {
             
 
 
-            {/* <div id="scroll-spacing"></div> */}
+            
                     
         <img id="test-img-1" src={beatfoxRows}/>
         <img id="test-img-2" src={beatfoxRows}/>
