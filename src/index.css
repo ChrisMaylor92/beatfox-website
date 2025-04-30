@@ -176,7 +176,7 @@ body{
 #homeTwo-music-video{
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100svh;
+  height:99svh;
   margin:auto;
   z-index:2;
 }
@@ -204,7 +204,7 @@ body{
   position:absolute;
   grid-row-start: 1;
   grid-column-start: 1;
-  height:100lvh;
+  height:99svh;
   margin:auto;
   bottom: 0;
 }
