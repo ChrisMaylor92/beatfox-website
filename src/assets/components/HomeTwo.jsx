@@ -38,7 +38,7 @@ export const HomeTwo = () => {
 
     return (
     <div id="home-two">
-        <PanelGroup direction="vertical" id="panel-group"> 
+        {/* <PanelGroup direction="vertical" id="panel-group"> 
                 <Panel  defaultSize={50} minSize={7} order={1}  className="panel" >
                     <div id="homeTwo-music-container">
                         <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>     
@@ -56,7 +56,7 @@ export const HomeTwo = () => {
                         </Link>
                     </div>
                 </Panel>
-            </PanelGroup>
+            </PanelGroup> */}
         <div id="scroll-container">
 
             
