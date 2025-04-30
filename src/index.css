@@ -155,7 +155,7 @@ body{
 
 #scroll-container{
   /* z-index:2; */
-  height: 100vh;
+  height: 99vh;
   overflow-y:scroll;
   /* overflow:hidden */
 }
