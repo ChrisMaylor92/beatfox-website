@@ -226,6 +226,7 @@ body{
   height: 20px;
   background-color: white;
   /* position: absolute; */
+  transform: translateX(-1px)
 }
 
 

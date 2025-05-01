@@ -81,7 +81,7 @@ export const Home = () => {
     return (
         <div id="home" ref={scrollDiv}>
         
-            <PanelGroup direction="vertical" id="panel-group"> 
+            <PanelGroup direction="horizontal" id="panel-group"> 
                 <Panel  ref={panelRef} defaultSize={7} minSize={7} order={1}  className="panel" id="music-panel">
                     <div id="home-music-container">
                         <video id="home-music-video" autoPlay loop muted src={homeVideoMusic}></video>
