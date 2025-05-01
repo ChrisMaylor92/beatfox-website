@@ -50,7 +50,7 @@ export const HomeTwo = () => {
                     </div>
                 </Panel>
       
-                <PanelResizeHandle id="homeTwo-pandle" children={<Navbar />}/>
+                <PanelResizeHandle id="homeTwo-pandle" />
                 <Panel minSize={0}  className="panel" >
                     <div id="homeTwo-art-container">
                         <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
