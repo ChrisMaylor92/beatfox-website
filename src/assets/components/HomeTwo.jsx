@@ -1,6 +1,7 @@
 import beatfoxRows from "../media/beatfox-rows.jpg"
 import homeVideoArt from "../media/home-art.mp4"
 import homeVideoMusic from "../media/home-music.mp4"
+import { Navbar } from './Navbar'
 import japan from "../media/collab-japanese.png"
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from "react";
@@ -48,7 +49,8 @@ export const HomeTwo = () => {
                         </Link>
                     </div>
                 </Panel>
-                <PanelResizeHandle id="homeTwo-pandle"/>
+      
+                <PanelResizeHandle id="homeTwo-pandle" children={<Navbar />}/>
                 <Panel minSize={0}  className="panel" >
                     <div id="homeTwo-art-container">
                         <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
