@@ -60,15 +60,15 @@ html, body {
     font-family: Arial;
     background-color: black;
     font-size: 14px;
-    min-height: 50svh;
+    
     
 }
 
-/* body{
+body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} */
+}
 
 .audiowide-regular {
     font-family: "Audiowide", serif;
@@ -148,7 +148,7 @@ html, body {
 
 #home-two{
   width: 100%;
-  height: 95svh;
+  height: 100svh;
   
 }
 
@@ -222,7 +222,11 @@ html, body {
 
 
 
-
+#homeTwo-pandle{
+  height: 20px;
+  background-color: white;
+  /* position: absolute; */
+}
 
 
 #test-img-1{
