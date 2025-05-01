@@ -60,8 +60,8 @@ html, body {
     font-family: Arial;
     background-color: black;
     font-size: 14px;
-    min-height: 99svh;
-    background-color: white;
+    min-height: 50svh;
+    
 }
 
 /* body{
