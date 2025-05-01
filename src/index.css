@@ -223,10 +223,17 @@ body{
 
 
 #homeTwo-pandle{
-  height: 20px;
-  background-color: white;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  /* background-color: white; */
   /* position: absolute; */
-  transform: translateX(-1px)
+  /* transform: translateX(-1px); */
+  transform: translateY(30px);
+  background-image: url("./assets/media/fox-logo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
 }
 
 

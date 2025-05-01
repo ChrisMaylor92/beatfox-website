@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
           <Route path="/" element={<HomeTwo/>} />
           <Route path="/art" element={<Art/>} />
