@@ -16,7 +16,7 @@ export const HomeTwo = () => {
 
 
     useEffect(() => {
-        document.body.style.height = "100svh"
+        
         const container = document.getElementById("scroll-container")
 
         function getScrollPercent() {
