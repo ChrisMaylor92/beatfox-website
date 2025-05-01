@@ -63,11 +63,11 @@ html, body {
     height: 99svh;
 }
 
-body{
+/* body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 .audiowide-regular {
     font-family: "Audiowide", serif;
