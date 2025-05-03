@@ -193,24 +193,24 @@ body{
 
 #homeTwo-art-container{
   display: grid;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100dvh;
 }
 
 #homeTwo-art-video{
   position:absolute;
-  grid-row-start: 1;
-  grid-column-start: 1;
   height:100dvh;
-  margin:auto;
   bottom: 0;
 }
 
 #homeTwo-art-title{
   grid-row-start: 1;
   grid-column-start: 1;
+  position: fixed;
+  bottom: 25%;
   margin:auto;
-  z-index:2;
+  z-index:1;
   font-family:"Audiowide", serif;
   color: white;
   font-size:2rem;

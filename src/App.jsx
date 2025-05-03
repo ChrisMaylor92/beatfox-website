@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Navbar } from './assets/components/Navbar'
 import { Art } from './assets/components/Art';
-import { HomeTwo } from './assets/components/HomeTwo';
+import { Home } from './assets/components/Home';
 import { Music } from './assets/components/Music';
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       {/* <Navbar /> */}
       <Routes>
-          <Route path="/" element={<HomeTwo/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/art" element={<Art/>} />
           <Route path="/music" element={<Music/>} />
           
