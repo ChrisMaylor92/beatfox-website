@@ -176,6 +176,7 @@ body{
   height:100dvh;
   margin:auto;
   z-index:2;
+  opacity: 100%;
 }
 #homeTwo-music-title{
   /* transform: translate(0, -250%); */

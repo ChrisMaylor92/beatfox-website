@@ -22,19 +22,28 @@ import {
 
 export const HomeTwo = () => {
     const panelRef = useRef(null);
+    const [percent, setPercent] = useState(50)
 
     useEffect(() => {
-        const panel = panelRef.current;
-        
-    }, [])
+        document.getElementById("homeTwo-music-video").style.opacity = `${percent}%`;
+        // document.getElementById("homeTwo-art-video").style.opacity = `${100 - percent}%`;
+
+        console.log("working")
+    }, [percent])
     
-   
+   const printSize = () => {
+    const panel = panelRef.current;
+    console.log(Math.trunc(panel.getSize()))
+    setPercent(Math.trunc(panel.getSize()))
+        //maybe hold size in state then update the panels css everytime the size changes
+   }
 
     return (
     <div id="home-two">
         <PanelGroup direction="vertical" id="panel-group"> 
-                <Panel ref={panelRef} defaultSize={48}  minSize={0} order={1} className="panel" >
+                <Panel onResize={printSize} ref={panelRef} defaultSize={48}  minSize={0} order={1} className="panel" >
                     <div id="homeTwo-music-container">
+                        
                         <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>     
                         <Link to="/music" id="homeTwo-music-title" >
                             <h1 >Music</h1>
