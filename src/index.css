@@ -179,7 +179,7 @@ body{
 }
 #homeTwo-music-title{
   /* transform: translate(0, -250%); */
-
+  transform: translateY(-150px);
   grid-row-start: 1;
   grid-column-start: 1;
   margin:auto;
@@ -214,6 +214,8 @@ body{
 
 #homeTwo-art-title{
   /* transform: translate(0, 250%); */
+  transform: translateY(150px);
+
   margin:auto;
   z-index:0;
   font-family:"Audiowide", serif;
@@ -226,22 +228,26 @@ body{
 
 
 #homeTwo-pandle{
-  height: 100px;
-  width: 100px;
+  height: 20px;
+  /* width: 100px; */
   margin: auto;
+  color: white;
   /* background-color: white; */
   /* position: absolute; */
   /* transform: translateX(-1px); */
-  transform: translateY(50px);
-  background-image: url("./assets/media/fox-logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  transform: translateY(10px);
+  /* background-image: url("./assets/media/fox-logo.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   z-index: 100;
 }
 
 
 
-
+#pandle{
+  height: 100%;
+  /* position:fixed; */
+}
 
 
 

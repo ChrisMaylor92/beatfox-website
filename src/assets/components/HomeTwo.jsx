@@ -10,6 +10,13 @@ import {
     PanelGroup,
     PanelResizeHandle,
   } from "react-resizable-panels";
+  import { FaArrowsUpDown } from "react-icons/fa6";
+  import { TbArrowsMoveVertical } from "react-icons/tb";
+  import { RiExpandUpDownLine } from "react-icons/ri";
+  import { FaUpDown } from "react-icons/fa6";
+
+
+
 
 
 
@@ -26,7 +33,7 @@ export const HomeTwo = () => {
     return (
     <div id="home-two">
         <PanelGroup direction="vertical" id="panel-group"> 
-                <Panel ref={panelRef} defaultSize={42}  minSize={0} order={1} className="panel" >
+                <Panel ref={panelRef} defaultSize={48}  minSize={0} order={1} className="panel" >
                     <div id="homeTwo-music-container">
                         <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>     
                         <Link to="/music" id="homeTwo-music-title" >
@@ -35,8 +42,8 @@ export const HomeTwo = () => {
                     </div>
                 </Panel>
       
-                <PanelResizeHandle id="homeTwo-pandle" />
-                <Panel minSize={9} order={1} className="panel" >
+                <PanelResizeHandle children={<FaUpDown id="pandle"/>} id="homeTwo-pandle" />
+                <Panel minSize={2} order={1} className="panel" >
                     <div id="homeTwo-art-container">
                         <div id="video-and-title">
                             <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
