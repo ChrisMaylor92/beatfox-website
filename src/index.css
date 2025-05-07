@@ -183,15 +183,25 @@ body{
   transform: translateY(-150px);
   grid-row-start: 1;
   grid-column-start: 1;
+
+  display: grid;
+  background: rgb(65, 65, 65);
+  border-radius: 5px;
+  width: 100px;
+  
   margin:auto;
   z-index:2;
   font-family:"Audiowide", serif;
   color: white;
   font-size:2rem;
-  opacity:0.8;
+  
 }
 
-
+#homeTwo-music-title h1{
+  margin:auto;
+  padding: 3px 0px;
+  opacity:0.8;
+}
 
 
 #homeTwo-art-container{
@@ -223,16 +233,25 @@ body{
 
 #homeTwo-art-title{
   /* transform: translate(0, 250%); */
+  display: grid;
   transform: translateY(150px);
-
+  background: rgb(65, 65, 65);
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
   margin:auto;
   z-index:0;
   font-family:"Audiowide", serif;
   color: white;
   font-size:2rem;
-  opacity:0.8;
+  
 }
 
+#homeTwo-art-title h1{
+  margin:auto;
+  padding: 3px 0px;
+  opacity:0.8;
+}
 
 
 
