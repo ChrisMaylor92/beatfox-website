@@ -1,8 +1,6 @@
-import beatfoxRows from "../media/beatfox-rows.jpg"
 import homeVideoArt from "../media/home-art.mp4"
 import homeVideoMusic from "../media/home-music.mp4"
-import { Navbar } from './Navbar'
-import japan from "../media/collab-japanese.png"
+import { FaUpDown } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from "react";
 import {
@@ -10,21 +8,13 @@ import {
     PanelGroup,
     PanelResizeHandle,
   } from "react-resizable-panels";
-  import { FaArrowsUpDown } from "react-icons/fa6";
-  import { TbArrowsMoveVertical } from "react-icons/tb";
-  import { RiExpandUpDownLine } from "react-icons/ri";
-  import { FaUpDown } from "react-icons/fa6";
 
 
-
-
-
-
-export const HomeTwo = () => {
+export const HomeTwo = ({setHome}) => {
     const panelRef = useRef(null);
     const [musicPercent, setMusicPercent] = useState(100)
     const [artPercent, setArtPercent] = useState(100)
-
+    // console.log(setHome)
     useEffect(() => {
         document.getElementById("homeTwo-music-container").style.opacity = `${musicPercent}%`;
         document.getElementById("video-and-title").style.opacity = `${artPercent}%`;
@@ -62,14 +52,13 @@ export const HomeTwo = () => {
                         </Link>
                     </div>
                 </Panel>
-      
                 <PanelResizeHandle children={<FaUpDown id="pandle"/>} id="homeTwo-pandle" />
                 <Panel minSize={2} order={1} className="panel" >
                     <div id="homeTwo-art-container" style={{opacity: "100%"}}>
                     <div id="black-layer"></div>
                         <div id="video-and-title">
                             <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
-                            <Link to="/art" id="homeTwo-art-title">
+                            <Link  to="/art" id="homeTwo-art-title">
                                 <h1>Art</h1>
                             </Link>
                         </div>
@@ -77,8 +66,6 @@ export const HomeTwo = () => {
                     </div>
                 </Panel>
             </PanelGroup>
-       
-        
     </div>
     )
 }
