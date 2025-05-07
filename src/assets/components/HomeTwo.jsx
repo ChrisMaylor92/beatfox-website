@@ -22,28 +22,40 @@ import {
 
 export const HomeTwo = () => {
     const panelRef = useRef(null);
-    const [percent, setPercent] = useState(50)
+    const [musicPercent, setMusicPercent] = useState(100)
+    const [artPercent, setArtPercent] = useState(100)
 
     useEffect(() => {
-        document.getElementById("homeTwo-music-video").style.opacity = `${percent}%`;
-        // document.getElementById("homeTwo-art-video").style.opacity = `${100 - percent}%`;
-
-        console.log("working")
-    }, [percent])
+        document.getElementById("homeTwo-music-container").style.opacity = `${musicPercent}%`;
+        document.getElementById("video-and-title").style.opacity = `${artPercent}%`;
+        // console.log("useEffect firing")
+    }, [musicPercent, artPercent])
     
-   const printSize = () => {
+   const reSize = () => {
     const panel = panelRef.current;
-    console.log(Math.trunc(panel.getSize()))
-    setPercent(Math.trunc(panel.getSize()))
-        //maybe hold size in state then update the panels css everytime the size changes
+    const panelSize = Math.trunc(panel.getSize())
+    // console.log(panelSize, "panelsize")
+
+ 
+    if (panelSize < 48){
+        const musicOpacity = panelSize * 2
+        // console.log(musicOpacity, "musicOpacity")
+        setMusicPercent(musicOpacity)
+    }
+
+    if (panelSize > 48){
+        const artPanelSize = 100 - panelSize
+        const artOpacity = artPanelSize * 2
+        // console.log(artOpacity, "artOpacity")
+        setArtPercent(artOpacity)
+    }
    }
 
     return (
     <div id="home-two">
         <PanelGroup direction="vertical" id="panel-group"> 
-                <Panel onResize={printSize} ref={panelRef} defaultSize={48}  minSize={0} order={1} className="panel" >
+                <Panel onResize={reSize} ref={panelRef} defaultSize={48}  minSize={0} order={1} className="panel" >
                     <div id="homeTwo-music-container">
-                        
                         <video id="homeTwo-music-video" autoPlay loop muted src={homeVideoMusic}></video>     
                         <Link to="/music" id="homeTwo-music-title" >
                             <h1 >Music</h1>
@@ -53,7 +65,8 @@ export const HomeTwo = () => {
       
                 <PanelResizeHandle children={<FaUpDown id="pandle"/>} id="homeTwo-pandle" />
                 <Panel minSize={2} order={1} className="panel" >
-                    <div id="homeTwo-art-container">
+                    <div id="homeTwo-art-container" style={{opacity: "100%"}}>
+                    <div id="black-layer"></div>
                         <div id="video-and-title">
                             <video id="homeTwo-art-video" autoPlay loop muted src={homeVideoArt}></video>  
                             <Link to="/art" id="homeTwo-art-title">

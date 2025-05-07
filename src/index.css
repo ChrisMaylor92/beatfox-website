@@ -205,12 +205,20 @@ body{
   width: 100vw;
   bottom: 0;
 }
-
+#black-layer{
+  background-image: url("./assets/media/black-layer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  height:100dvh;
+  width: 100vw;
+  bottom: 0;
+}
 #homeTwo-art-video{
   position:absolute;
   height:100dvh;
   bottom: 0;
-  
+  /* opacity: 48%; */
 }
 
 #homeTwo-art-title{
@@ -237,9 +245,7 @@ body{
   /* position: absolute; */
   /* transform: translateX(-1px); */
   transform: translateY(10px);
-  /* background-image: url("./assets/media/fox-logo.png"); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+ 
   z-index: 100;
 }
 
