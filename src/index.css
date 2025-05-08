@@ -185,7 +185,7 @@ body{
   grid-column-start: 1;
 
   display: grid;
-  background: rgb(65, 65, 65);
+  background: rgb(217, 146, 64);
   border-radius: 5px;
   width: 100px;
   
@@ -235,7 +235,7 @@ body{
   /* transform: translate(0, 250%); */
   display: grid;
   transform: translateY(150px);
-  background: rgb(65, 65, 65);
+  background: rgb(144, 98, 145);
   border-radius: 5px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   width: 100px;
