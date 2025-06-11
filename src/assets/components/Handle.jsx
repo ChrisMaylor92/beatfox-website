@@ -1,5 +1,5 @@
 
-import homeHandle from "../media/Handle.png"
+import homeHandle from "../media/Handle-2.png"
 
 export const Handle = () => {
     return (
