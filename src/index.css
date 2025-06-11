@@ -256,19 +256,22 @@ body{
 
 
 #homeTwo-pandle{
-  height: 20px;
+
+  height: 50px;
   /* width: 100px; */
   margin: auto;
   color: white;
   /* background-color: white; */
   /* position: absolute; */
   /* transform: translateX(-1px); */
-  transform: translateY(10px);
+
  
   z-index: 100;
 }
 
-
+#handle-img{
+  height: 100px;
+}
 
 #pandle{
   height: 100%;

@@ -1,5 +1,6 @@
 import homeVideoArt from "../media/home-art.mp4"
 import homeVideoMusic from "../media/home-music.mp4"
+import { Handle } from './Handle'
 import { FaUpDown } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from "react";
@@ -52,7 +53,7 @@ export const HomeTwo = ({setHome}) => {
                         </Link>
                     </div>
                 </Panel>
-                <PanelResizeHandle children={<FaUpDown id="pandle"/>} id="homeTwo-pandle" />
+                <PanelResizeHandle children={<Handle/>} id="homeTwo-pandle" />
                 <Panel minSize={2} order={1} className="panel" >
                     <div id="homeTwo-art-container" style={{opacity: "100%"}}>
                     <div id="black-layer"></div>

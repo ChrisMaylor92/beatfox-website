@@ -1,10 +1,10 @@
-import { FaArrowsUpDown } from "react-icons/fa6";
 
+import homeHandle from "../media/Handle.png"
 
 export const Handle = () => {
     return (
         <nav id="pandle-container" >
-            <FaArrowsUpDown/>
+            <img src={homeHandle} id="handle-img"></img>
         </nav>
     )
 }
