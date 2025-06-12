@@ -10,7 +10,7 @@ export const Art = () => {
     
     
     return (
-        <div >
+        <div id="art-body">
             <Navbar />
             <Header />
             <Bio />

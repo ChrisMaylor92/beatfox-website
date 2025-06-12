@@ -1,17 +1,18 @@
 
-import bioFace from "../media/beatfox-bio-face.jpg"
-import bioMic from "../media/beatfox-bio-mic.jpg"
-import bioCan from "../media/beatfox-bio-can.jpg"
+import bioFace from "../media/bio-face-mobile.jpg"
+import bioMic from "../media/bio-mic-mobile.jpg"
+import bioCan from "../media/bio-can-mobile.jpg"
 import logo from "../media/fox-logo.jpg"
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import { useState } from 'react'
+import { Link } from 'react-scroll';
 
 export const Bio = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return(
-    <div id="bio" >
+    <div id="bio" name="bio">
         <div id="bio-container" style={{height: isOpen? "auto" : "50vh"}}>
             
             <div id="dropdown-face">
@@ -32,8 +33,8 @@ export const Bio = () => {
                 <p>His calligraphy, an art form rooted in precision and elegance, adds a refined contrast to the raw energy of his graffiti. J.Fox seamlessly merges the expressive freedom of street art with the meticulous beauty of traditional script, creating contrasting dynamic pieces that tell a story in every stroke.</p>
             </div> : <></> }
             
-            <div id="bio-button" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen? <FaArrowUp id="bio-arrow"/> : <FaArrowDown id="bio-arrow"/>}
+            <div id="bio-button" >
+                    {isOpen? <Link to="art-header" smooth={true} offset={-70} duration={100} onClick={() => setIsOpen(!isOpen)} ><FaArrowUp id="bio-arrow"/></Link> : <Link to="bio" smooth={true} duration={400} offset={-70} onClick={() => setIsOpen(!isOpen)}><FaArrowDown id="bio-arrow"/></Link>}
             </div>
         </div>
     </div>

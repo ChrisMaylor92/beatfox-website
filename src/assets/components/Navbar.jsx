@@ -5,7 +5,7 @@ export const Navbar = () => {
         <nav id="navbar-container" >
             <img src={logo} id="nav-logo"></img>
             <h1><a href="/">BeatFox</a></h1> 
-            <div id="scroll-watcher"></div>
+            
         </nav>
     )
 }
